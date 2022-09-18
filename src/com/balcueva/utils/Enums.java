@@ -6,7 +6,18 @@ public class Enums {
   }
 
   public enum BodyType {
-    SMALL, MEDIUM, LARGE;
+    SMALL("Small"), MEDIUM("Medium"), LARGE("Large");
+
+    private String value;
+
+    private BodyType(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return value;
+    }
   }
 
   public enum PetType {
@@ -60,9 +71,9 @@ public class Enums {
 
   public enum DogBreed {
     // @formatter:off
-    LABRADORRETRIEVER("Labrador Retriever"), GERMANSHEPPERDS("German Shepperds"),
-    GOLDENRETRIEVER("Golden Retriever"), FRENCHBULLDOGS("French Bulldogs"), BEAGLES("Beagles"),
-    BULLDOGS("Bulldogs"), POODLES("Poodles");
+    LABRADORRETRIEVER("Labrador Retriever"), GERMANSHEPPERD("German Shepperd"),
+    GOLDENRETRIEVER("Golden Retriever"), FRENCHBULLDOG("French Bulldog"), BEAGLE("Beagle"),
+    BULLDOG("Bulldog"), POODLES("Poodles");
     // @formatter:on
 
     private String value;
