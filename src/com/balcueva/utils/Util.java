@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Util {
-  protected static final ArrayList<String> commonWords = new ArrayList<>();
-  public static final Random random = new Random();
+  private static Random random = new Random();
+  private ArrayList<String> commonWords = new ArrayList<>();
 
   private Util() {
     throw new IllegalStateException("Utility class");
   }
 
-  public static void readCommonWordsFromFiles(String fileName) {
+  public void readCommonWordsFromFiles(String fileName) {
     try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
       String line;
       while ((line = br.readLine()) != null) {
@@ -25,7 +25,7 @@ public class Util {
     }
   }
 
-  public static String generateRandomNumber(int n) {
+  public static String getRandomNumbers(int n) {
     StringBuilder number = new StringBuilder();
     for (int i = 0; i < n; i++)
       number.append(random.nextInt(10));
