@@ -14,7 +14,7 @@
       "type": "java",
       "name": "Launch App",
       "request": "launch",
-      "mainClass": "App",
+      "mainClass": "com.balcueva.App",
       "projectName": "vet-management-system_e4de26b8"
     }
   ]
