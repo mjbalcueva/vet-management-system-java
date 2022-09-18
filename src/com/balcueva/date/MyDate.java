@@ -1,6 +1,7 @@
 package com.balcueva.date;
 
 import com.balcueva.utils.DateUtil;
+import com.balcueva.utils.Util;
 
 public class MyDate {
   private int year;
@@ -15,6 +16,13 @@ public class MyDate {
     this.month = month;
     this.day = day;
     this.formatForPersonalID = String.format("%02d%02d%02d", year % 100, month, day);
+  }
+
+  public static MyDate randomDate(int fromYear, int toYear) {
+    int randYear = Util.getRandom().nextInt(fromYear, toYear + 1);
+    int randMonth = Util.getRandom().nextInt(1, 12);
+    int randDay = Util.getRandom().nextInt(1, 31);
+    return new MyDate(randYear, randMonth, randDay);
   }
 
   @Override
