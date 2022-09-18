@@ -27,7 +27,8 @@ public abstract class Person {
     StringBuilder id = new StringBuilder();
     id.append(gender.equals(Gender.MALE) ? "1" : "2");
     id.append(birthDate.formatForPersonalID);
-    id.append(Util.getRandomNumbers(n));
+    for (int i = 0; i < n; i++)
+      id.append(Util.getRandom().nextInt(10));
     return id.toString();
   }
 }
