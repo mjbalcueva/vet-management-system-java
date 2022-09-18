@@ -22,6 +22,8 @@ public class MyDate {
     int randYear = Util.getRandom().nextInt(fromYear, toYear + 1);
     int randMonth = Util.getRandom().nextInt(1, 12);
     int randDay = Util.getRandom().nextInt(1, 31);
+    if (!DateUtil.isValidDate(randYear, randMonth, randDay))
+      return randomDate(fromYear, toYear);
     return new MyDate(randYear, randMonth, randDay);
   }
 
