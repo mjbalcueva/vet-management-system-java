@@ -2,6 +2,7 @@ package com.balcueva.pets;
 
 import java.util.ArrayList;
 import com.balcueva.date.MyDate;
+import com.balcueva.interfaces.IPatient;
 import com.balcueva.utils.Enums.Taxonomy;
 import com.balcueva.utils.Util.Disease;
 
