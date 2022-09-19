@@ -6,12 +6,12 @@ import com.balcueva.pets.Cat;
 import com.balcueva.pets.Dog;
 import com.balcueva.pets.Parrot;
 import com.balcueva.pets.Turtle;
-import com.balcueva.utils.Enums;
+import com.balcueva.utils.Enums.Gender;
 import com.balcueva.utils.Util;
 
 public class App {
   public static void main(String[] args) {
-    Owner owner1 = new Owner(new MyDate(1997, 7, 8), Enums.Gender.FEMALE, "Anne", "SMITH", "+40-741-234-567");
+    Owner owner1 = new Owner(new MyDate(1997, 7, 8), Gender.FEMALE, "Anne", "SMITH", "+40-741-234-567");
     System.out.println(owner1);
     System.out.println(owner1.noiseInOwnersHouse());
     Cat pet1 = new Cat(true, MyDate.randomDate(2018, 2020), "Joe", Util.getRandom().nextDouble(7));
