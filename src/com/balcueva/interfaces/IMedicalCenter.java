@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import com.balcueva.utils.Enums.PetType;
 
 public interface IMedicalCenter {
-  public int getNumberOfPatients = 0;
+  public int numberOfPatients = 0;
   public int numberOfDoctors = 0;
-  public String getMedCenterInformation = null;
+  public String medCenterInformation = null;
 
   private void hireDoctor(IDoctor doctor) {};
 
