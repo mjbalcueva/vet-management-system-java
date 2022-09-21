@@ -10,15 +10,14 @@ import com.balcueva.utils.Enums.Taxonomy;
 public class Cat extends Pet {
   private boolean hasPedigree;
   private CatBreed catBreed;
-  private PetType patientType;
   private Seriosity seriosityOfCase;
   private Taxonomy taxonomy;
 
   public Cat(boolean hasPedigree, MyDate birthDate, String petName, double currentWeight) {
-    super(birthDate, petName, currentWeight);
+    super(birthDate, petName, currentWeight, PetType.CAT);
     this.hasPedigree = hasPedigree;
     catBreed = CatBreed.values()[Util.getRandom().nextInt(CatBreed.values().length)];
-    patientType = PetType.CAT;
+    // patientType = PetType.CAT;
     taxonomy = Taxonomy.MAMMALS;
   }
 
