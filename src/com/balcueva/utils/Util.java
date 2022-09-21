@@ -47,6 +47,22 @@ public class Util {
     }
   }
 
+  public static List<Disease> getDiseasesByPetType(PetType petType) {
+    ArrayList<Disease> diseasesByPetType = new ArrayList<>();
+    for (Disease disease : diseases)
+      if (disease.petType == petType)
+        diseasesByPetType.add(disease);
+    return diseasesByPetType;
+  }
+
+  public static int getNumberOfDiseasesByPet(PetType petType) {
+    int count = 0;
+    for (Disease disease : diseases)
+      if (disease.petType == petType)
+        count++;
+    return count;
+  }
+
   public static void readCommonWordsFromFiles(String fileName) {
     try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
       String line;
@@ -75,6 +91,10 @@ public class Util {
       this.petType = petType;
       this.diseaseType = diseaseType;
       treatments = new ArrayList<>();
+    }
+
+    public String getDiseaseType() {
+      return diseaseType;
     }
   }
 }
