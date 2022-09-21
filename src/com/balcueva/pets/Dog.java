@@ -10,13 +10,15 @@ import com.balcueva.utils.Enums.Taxonomy;
 public class Dog extends Pet {
   private boolean goodHouseKeeper;
   private DogBreed dogBreed;
+  private PetType patientType;
   private Seriosity seriosityOfCase;
   private Taxonomy taxonomy;
 
   public Dog(boolean goodHouseKeeper, MyDate birthDate, String petName, double currentWeight) {
-    super(birthDate, petName, currentWeight, PetType.DOG);
+    super(birthDate, petName, currentWeight);
     this.goodHouseKeeper = goodHouseKeeper;
     dogBreed = DogBreed.values()[Util.getRandom().nextInt(DogBreed.values().length)];
+    patientType = PetType.DOG;
     taxonomy = Taxonomy.MAMMALS;
   }
 

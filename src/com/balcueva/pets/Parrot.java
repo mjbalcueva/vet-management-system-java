@@ -12,13 +12,15 @@ public class Parrot extends Pet {
   private ArrayList<String> alreadyKnownWords = new ArrayList<>();
   private boolean canSpeak;
   private BodyType bodyType;
+  private PetType patientType;
   private Seriosity seriosityOfCase;
   private Taxonomy taxonomy;
 
   public Parrot(boolean canSpeak, MyDate birthDate, String petName, double currentWeight) {
-    super(birthDate, petName, currentWeight, PetType.PARROT);
+    super(birthDate, petName, currentWeight);
     this.canSpeak = canSpeak;
     bodyType = BodyType.values()[Util.getRandom().nextInt(BodyType.values().length)];
+    patientType = PetType.PARROT;
     taxonomy = Taxonomy.BIRDS;
     if (canSpeak)
       initializeKnownWords();
