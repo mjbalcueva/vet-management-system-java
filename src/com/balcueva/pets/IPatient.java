@@ -1,4 +1,4 @@
-package com.balcueva.interfaces;
+package com.balcueva.pets;
 
 public interface IPatient {
   public void unexpectedIllnessOccured();

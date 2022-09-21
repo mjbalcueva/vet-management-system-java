@@ -21,18 +21,7 @@ public class Enums {
   }
 
   public enum PetType {
-    DOG("Dog"), CAT("Cat"), PARROT("Parrot"), TURTLE("Turtle");
-
-    private String value;
-
-    private PetType(String value) {
-      this.value = value;
-    }
-
-    @Override
-    public String toString() {
-      return value;
-    }
+    DOG, CAT, PARROT, TURTLE
   }
 
   public enum Taxonomy {

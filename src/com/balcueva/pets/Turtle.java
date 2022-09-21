@@ -15,10 +15,11 @@ public class Turtle extends Pet {
   private TurtleClassification classification;
 
   public Turtle(int numHibernatingMonths, MyDate birthDate, String petName, double currentWeight) {
-    super(birthDate, petName, currentWeight, PetType.TURTLE);
+    super(birthDate, petName, currentWeight);
     this.numHibernatingMonths = numHibernatingMonths;
     classification =
         TurtleClassification.values()[Util.getRandom().nextInt(TurtleClassification.values().length)];
+    patientType = PetType.TURTLE;
     taxonomy = Taxonomy.REPTILES;
   }
 
