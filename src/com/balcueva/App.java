@@ -31,5 +31,10 @@ public class App {
     System.out.println(medicalCenter);
     Util.readDiseasesAndTreatmentsFromFile("assets/diseases.csv");
     Util.printAllDiseasesByPetType(PetType.DOG);
+
+    // part three, pet gets sick
+    owner1.getPet("Lizzie").unexpectedIllnessOccured();
+    System.out.println(owner1.getPet("Lizzie"));
+    owner1.getPet("Lizzie").checkHealthStatus();;
   }
 }
