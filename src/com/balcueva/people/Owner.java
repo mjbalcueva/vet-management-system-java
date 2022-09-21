@@ -19,6 +19,13 @@ public class Owner extends Person {
     }
   }
 
+  public Pet getPet(String string) {
+    for (Pet pet : pets)
+      if (pet.getName().equals(string))
+        return pet;
+    return null;
+  }
+
   public String noiseInOwnersHouse() {
     StringBuilder noise = new StringBuilder();
     if (pets.isEmpty()) {

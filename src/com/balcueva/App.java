@@ -1,16 +1,19 @@
 package com.balcueva;
 
 import com.balcueva.date.MyDate;
+import com.balcueva.medcenters.Veterinary;
 import com.balcueva.people.Owner;
 import com.balcueva.pets.Cat;
 import com.balcueva.pets.Dog;
 import com.balcueva.pets.Parrot;
 import com.balcueva.pets.Turtle;
 import com.balcueva.utils.Enums.Gender;
+import com.balcueva.utils.Enums.PetType;
 import com.balcueva.utils.Util;
 
 public class App {
   public static void main(String[] args) {
+    // part one, create owners
     Owner owner1 = new Owner(new MyDate(1997, 7, 8), Gender.FEMALE, "Anne", "SMITH", "+40-741-234-567");
     System.out.println(owner1);
     System.out.println(owner1.noiseInOwnersHouse());
@@ -21,5 +24,17 @@ public class App {
     owner1.addNewPets(pet1, pet2, pet3, pet4);
     System.out.println(owner1);
     System.out.println(owner1.noiseInOwnersHouse());
+
+    // part two, create veterinary centers
+    Veterinary medicalCenter =
+        new Veterinary("str. Suceava Nr. 4 Targu Mures 540366 Romania", "0740 491 345", "AssisiVet");
+    System.out.println(medicalCenter);
+    Util.readDiseasesAndTreatmentsFromFile("assets/diseases.csv");
+    Util.printAllDiseasesByPetType(PetType.DOG);
+
+    // part three, pet gets sick
+    owner1.getPet("Lizzie").unexpectedIllnessOccured();
+    System.out.println(owner1.getPet("Lizzie"));
+    owner1.getPet("Lizzie").checkHealthStatus();;
   }
 }
