@@ -18,7 +18,7 @@ public abstract class Person {
     this.gender = gender;
     this.firstName = firstName;
     this.lastName = lastName;
-    this.fullName = firstName + " " + lastName;
+    this.fullName = firstName + " " + lastName.toUpperCase();
     this.contact = contact;
     this.personID = generatePersonID(6);
   }
