@@ -23,6 +23,7 @@ public class Veterinary implements IMedicalCenter {
     StringBuilder sb = new StringBuilder();
     sb.append(name + " veterinary");
     sb.append("\n\tAddress: " + address);
+    sb.append("\n\tContact: " + contact);
     sb.append("\n\tNumber of doctors: " + numberOfDoctors);
     sb.append("\n\tNumber of current patients: " + numberOfPatients);
     sb.append("\n");
