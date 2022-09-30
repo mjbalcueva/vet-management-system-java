@@ -1,6 +1,7 @@
 package com.balcueva.medcenters;
 
 import com.balcueva.interfaces.IMedicalCenter;
+import com.balcueva.pets.Pet;
 
 public class Veterinary implements IMedicalCenter {
   private String address;
@@ -17,6 +18,8 @@ public class Veterinary implements IMedicalCenter {
     this.contact = contact;
     Veterinary.veterinaryId++;
   }
+
+  public void assignPatientToADoctor(Pet pet) {}
 
   @Override
   public String toString() {

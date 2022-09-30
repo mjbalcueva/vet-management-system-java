@@ -37,5 +37,7 @@ public class App {
     owner1.getPet("Lizzie").unexpectedIllnessOccured();
     System.out.println(owner1.getPet("Lizzie"));
     owner1.getPet("Lizzie").checkHealthStatus();
+
+    medicalCenter.assignPatientToADoctor(owner1.getPet("Lizzie"));
   }
 }
