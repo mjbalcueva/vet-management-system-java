@@ -11,14 +11,12 @@ public class Cat extends Pet {
   private boolean hasPedigree;
   private CatBreed catBreed;
   private Seriosity seriosityOfCase;
-  private Taxonomy taxonomy;
 
   public Cat(boolean hasPedigree, MyDate birthDate, String petName, double currentWeight) {
-    super(birthDate, petName, currentWeight, PetType.CAT);
+    super(birthDate, petName, currentWeight, PetType.CAT, Taxonomy.MAMMALS);
     this.hasPedigree = hasPedigree;
     catBreed = CatBreed.values()[Util.getRandom().nextInt(CatBreed.values().length)];
     // patientType = PetType.CAT;
-    taxonomy = Taxonomy.MAMMALS;
   }
 
   @Override

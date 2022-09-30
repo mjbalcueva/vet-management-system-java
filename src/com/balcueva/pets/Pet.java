@@ -19,13 +19,15 @@ public abstract class Pet implements IPatient {
   private ArrayList<Disease> diseases = new ArrayList<>();
   private static int numPets;
 
-  protected Pet(MyDate birthDate, String petName, double currentWeight, PetType patientType) {
+  protected Pet(MyDate birthDate, String petName, double currentWeight, PetType patientType,
+      Taxonomy taxonomy) {
     this.birthDate = birthDate;
     this.petName = petName;
     this.currentWeight = currentWeight;
     isHealthy = true;
     petId = numPets++;
     this.patientType = patientType;
+    this.taxonomy = taxonomy;
   }
 
   public String speak() {

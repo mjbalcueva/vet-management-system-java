@@ -16,10 +16,9 @@ public class Parrot extends Pet {
   private Taxonomy taxonomy;
 
   public Parrot(boolean canSpeak, MyDate birthDate, String petName, double currentWeight) {
-    super(birthDate, petName, currentWeight, PetType.PARROT);
+    super(birthDate, petName, currentWeight, PetType.PARROT, Taxonomy.BIRDS);
     this.canSpeak = canSpeak;
     bodyType = BodyType.values()[Util.getRandom().nextInt(BodyType.values().length)];
-    taxonomy = Taxonomy.BIRDS;
     if (canSpeak)
       initializeKnownWords();
   }

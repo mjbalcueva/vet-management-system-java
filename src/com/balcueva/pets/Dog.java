@@ -14,10 +14,9 @@ public class Dog extends Pet {
   private Taxonomy taxonomy;
 
   public Dog(boolean goodHouseKeeper, MyDate birthDate, String petName, double currentWeight) {
-    super(birthDate, petName, currentWeight, PetType.DOG);
+    super(birthDate, petName, currentWeight, PetType.DOG, Taxonomy.MAMMALS);
     this.goodHouseKeeper = goodHouseKeeper;
     dogBreed = DogBreed.values()[Util.getRandom().nextInt(DogBreed.values().length)];
-    taxonomy = Taxonomy.MAMMALS;
   }
 
   @Override
